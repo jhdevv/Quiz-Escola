@@ -52,4 +52,9 @@ bottom: 10%;
 font-style: normal;
 font-size: 1.5em;
 font-weight: bold;
+ white-space: pre-wrap;  /* mantém quebras manuais, mas quebra se precisar */
+  word-wrap: break-word;  /* quebra palavras muito longas */
+max-width: 100%;        /* nunca passa da tela */
+line-height: 1.4;       /* mais espaço entre linhas */
 }
+
