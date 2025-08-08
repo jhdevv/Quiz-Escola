@@ -1,0 +1,55 @@
+h1{
+    display: block; /* Display para deixar o texto visivel ou não*/
+     animation-name: kaliel; /*Nome do efeito*/
+ animation-duration: 6s; /*Duração do efeito*/
+ animation-iteration-count: infinite;
+}
+
+@keyframes kaliel{
+    0% {color: red}
+    20% {color: blue}
+    40% {color: green}
+    50% {color: gold}
+    60% {color: purple}
+  70%  {color: cadetblue;}
+  80% {color: black;}
+  90% {color: orange}
+  100% {color: blueviolet}
+}
+
+
+#Container{
+    margin: 0 auto;
+ display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 3 colunas de largura igual */
+  gap: 10px; /*Espaçamento entre os quadrados*/
+
+
+}
+
+#Op1, #Op2, #Op3, #Op4{
+    width: 180px;
+    height: 120px;
+    border: 2px double;
+    cursor: pointer; /* Altera o cursor ao passar o mouse */
+    margin: 1px;
+   padding: 10px;
+ background-color: cadetblue;
+ border-radius: 12px;
+    font-size: 18px;
+}
+
+#Container :hover {
+    background-color: blue; /* cor quando o mouse passa */
+}
+
+
+
+pre{
+display: none;
+position: relative;
+bottom: 10%;
+font-style: normal;
+font-size: 1.5em;
+font-weight: bold;
+}
