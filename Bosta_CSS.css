@@ -2,7 +2,7 @@ body{
   background-color: hsl(44, 100%, 46%);
 }
 
-h1{
+h1 b{
     display: block; /* Display para deixar o texto visivel ou não*/
      animation-name: kaliel; /*Nome do efeito*/
  animation-duration: 6s; /*Duração do efeito*/
@@ -10,15 +10,9 @@ h1{
 }
 
 @keyframes kaliel{
-    0% {color: red}
-    20% {color: blue}
-    40% {color: green}
-    50% {color: gold}
-    60% {color: purple}
-  70%  {color: cadetblue;}
-  80% {color: black;}
-  90% {color: orange}
-  100% {color: blueviolet}
+    0% {color: blue}
+     50% {color: rgb(11, 11, 165)}
+  100% {color: rgb(35, 35, 156);}
 }
 
 
@@ -32,7 +26,7 @@ h1{
 }
 
 #Op1, #Op2, #Op3, #Op4{
-    width: 180px;
+    width: 250px;
     height: 120px;
     border: 2px double;
     cursor: pointer; /* Altera o cursor ao passar o mouse */
@@ -40,7 +34,22 @@ h1{
    padding: 10px;
  background-color: rgba(87, 56, 199, 85%);
  border-radius: 48px;
+ box-shadow:  rgba(87, 56, 199, 85%) 12px 0px 50px 0px;
     font-size: 18px;
+}
+
+#reset{
+  width: 100px; /**/
+  height: 30px;
+  padding: 1px;
+  background-color: red;
+  border-style: ridge;
+  cursor:pointer;
+  border-radius: 12px;
+
+}
+#reset:hover {
+    background-color: rgb(189, 5, 5); /* cor quando o mouse passa */
 }
 
 #Container :hover {
@@ -60,3 +69,11 @@ max-width: 100%;        /* nunca passa da tela */
 line-height: 1.4;       /* mais espaço entre linhas */
 }
 
+#Pergunta{
+  width: 400px;
+margin: 0 auto;
+background-color: hsla(0, 0, 0%, 0%);
+border-style: groove;
+border-radius: 10px;
+box-shadow: black 12px 0px 50px 0px;
+}
