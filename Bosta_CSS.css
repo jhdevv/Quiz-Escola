@@ -1,3 +1,7 @@
+body{
+  background-color: hsl(44, 100%, 46%);
+}
+
 h1{
     display: block; /* Display para deixar o texto visivel ou não*/
      animation-name: kaliel; /*Nome do efeito*/
@@ -34,16 +38,14 @@ h1{
     cursor: pointer; /* Altera o cursor ao passar o mouse */
     margin: 1px;
    padding: 10px;
- background-color: cadetblue;
- border-radius: 12px;
+ background-color: rgba(87, 56, 199, 85%);
+ border-radius: 48px;
     font-size: 18px;
 }
 
 #Container :hover {
-    background-color: blue; /* cor quando o mouse passa */
+    background-color:#000080; /* cor quando o mouse passa */
 }
-
-
 
 pre{
 display: none;
