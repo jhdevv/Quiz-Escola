@@ -1,32 +1,6 @@
-body{
-  background-color: hsl(44, 100%, 46%);
-}
-
-#Topo{
-      background-color: #036;
-    padding: 5px 20px;
-    text-decoration: none; /*Tira o sublinhando azul do link*/
-}
-
-.auxiliar{width: 220px; height: 320px; float: left;}
-.auxiliar_navegacao a {
-  height: 40px;
-  width: 300;
-  background: rgba(87, 56, 199, 85%);
-  color: #fff;
-  display: block;
-  margin-bottom: 3px;
-  line-height: 10px;
-  padding-left: 45px;
-  text-transform: capitalize;
-  border-radius: 12px
-}
-
-a{
-  text-decoration: none;
-}
-.auxiliar_navegacao a:hover{
-background: #036;
+body {
+    background: linear-gradient(to bottom, #f9f9f9, #ffe59d); /* degradê claro */
+    font-family: 'Segoe UI', sans-serif;
 }
 
 
@@ -38,9 +12,9 @@ h1 b{
 }
 
 @keyframes kaliel{
-    0% {color: white}
-     50% {color: rgba(255, 255, 255, 0.726)}
-  100% {color: rgba(255, 255, 255, 0.781)}
+    0% {color: blue}
+     50% {color: rgb(11, 11, 165)}
+  100% {color: rgb(35, 35, 156);}
 }
 
 
@@ -48,9 +22,9 @@ h1 b{
     margin: 0 auto;
  display: grid;
   grid-template-columns: repeat(2, 1fr); /* 3 colunas de largura igual */
-  gap: 10px; /*Espaçamento entre os quadrados*/
-
-
+  gap: 5px; /*Espaçamento entre os quadrados*/
+ max-width: 520px;             /* limita largura total da grid */
+    justify-items: 50%;        /* centraliza cada botão */
 }
 
 #Op1, #Op2, #Op3, #Op4{
@@ -58,12 +32,20 @@ h1 b{
     height: 120px;
     border: 2px double;
     cursor: pointer; /* Altera o cursor ao passar o mouse */
-    margin: 24px;
+    margin: 1px;
+   padding: 10px;
  background-color: rgba(87, 56, 199, 85%);
  border-radius: 48px;
  box-shadow:  rgba(87, 56, 199, 85%) 12px 0px 50px 0px;
-    font-size: 18px;
+  font-size: 18px;
+  transition: transform 0.2s, background-color 0.2s;
 }
+#Op1:hover, #Op2:hover, #Op3:hover, #Op4:hover {
+    transform: scale(1.05);
+    background-color: #0c6e45; /* combina com o menu */
+    color: white;
+}
+
 
 #reset{
   width: 100px; /**/
@@ -100,7 +82,58 @@ line-height: 1.4;       /* mais espaço entre linhas */
   width: 400px;
 margin: 0 auto;
 background-color: hsla(0, 0, 0%, 0%);
-border-style: groove;
-border-radius: 10px;
-box-shadow: black 12px 0px 50px 0px;
+padding: 20px;
+text-align: center;
+background-color: white;
+border-radius: 15px;
+box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
 }
+
+#menu {
+    display: flex;
+    width: 98%;
+    justify-content: center; /*alinha horizontalmente ao centro do container*/
+    align-items: center; /*alinha verticalmente ao centro. */
+    border-bottom: 1px solid #333; /* Cinza escuro */
+    padding: 12px;
+    background: linear-gradient(90deg, #1e3c72, #2a5298); /* azul degradê */
+    border-bottom: 2px solid #162d59;
+}
+
+.menu_item{
+      padding: 10px;
+    cursor: pointer;
+
+    font-size: 18px;
+    color: #000; /* Texto preto */
+    font-family:  Arial, sans-serif;
+    text-decoration: none;
+}
+
+.menu_item:hover {
+    color: white;
+    background-color: #1e3c72;
+    border-radius: 8px;
+}
+
+#titulo {
+    text-align: center;
+    font-size: 2.5em;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(90deg, #0057b7, #009739, #d50000); /* cores da escola */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.3);
+    margin: 20px auto;
+    width: fit-content;
+    animation: brilho 3s infinite alternate;
+}
+
+/* Efeito de brilho suave */
+@keyframes brilho {
+    from { text-shadow: 0 0 5px #fff, 0 0 10px #0057b7; }
+    to   { text-shadow: 0 0 15px #009739, 0 0 25px #d50000; }
+}
+
