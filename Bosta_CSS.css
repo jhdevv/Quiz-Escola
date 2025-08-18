@@ -141,44 +141,55 @@ box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
 
 /*AJUSTES PARA CELULAR!*/
 
-/* Ajustes para telas menores que 768px (celulares e tablets pequenos) */
 @media (max-width: 768px) {
+    /* Título */
     #titulo {
-        font-size: 1.5em;   /* diminui o título */
+        font-size: 1.5em;
         padding: 12px;
-        width: 90%;         /* ocupa a largura, mas sem quebrar */
+        width: 90%;
         text-align: center;
     }
 
+    /* Menu */
     #menu {
-        flex-direction: column;  /* menu em coluna no celular */
-        gap: 8px;
+        flex-direction: column;
+        gap: 10px;
         padding: 10px;
     }
 
     .menu_item {
-        font-size: 16px;   /* texto menor no menu */
+        font-size: 16px;
         padding: 8px 12px;
-        width: 100%;       /* cada item ocupa toda a largura */
+        width: 100%;
         text-align: center;
+        display: block;
     }
 
+    /* Pergunta */
     #Pergunta {
-        width: 90%;        /* adapta a largura da pergunta */
-        font-size: 1em;    /* texto mais compacto */
+        width: 90%;           /* ocupa quase toda a tela */
+        font-size: 1.1em;     /* tamanho da fonte menor */
         padding: 15px;
+        line-height: 1.4;     /* mais legível */
+        box-sizing: border-box; /* evita overflow */
     }
 
+    /* Container de opções */
     #Container {
-        grid-template-columns: 1fr; /* apenas 1 coluna no celular */
+        grid-template-columns: 1fr;  /* uma coluna */
         max-width: 100%;
+        gap: 10px;                   /* espaço entre os botões */
+        padding: 0 10px;             /* evita que encoste nas bordas */
     }
 
+    /* Botões de opções */
     #Op1, #Op2, #Op3, #Op4 {
-        width: 100%;       /* botões ocupam toda a largura disponível */
-        height: auto;      /* altura ajusta automaticamente */
+        width: 100%;     /* ocupam toda a largura do container */
+        height: auto;    /* altura ajusta automaticamente */
         font-size: 16px;
         padding: 15px;
+        box-sizing: border-box;
     }
 }
+
 
