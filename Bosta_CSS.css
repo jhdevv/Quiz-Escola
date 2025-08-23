@@ -37,7 +37,7 @@ h1 b{
  background-color: rgba(87, 56, 199, 85%);
  border-radius: 48px;
  box-shadow:  rgba(87, 56, 199, 85%) 12px 0px 50px 0px;
-  font-size: 18px;
+  font-size: 16px;
   transition: transform 0.2s, background-color 0.2s;
 }
 #Op1:hover, #Op2:hover, #Op3:hover, #Op4:hover {
@@ -91,7 +91,7 @@ box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
 
 #menu {
     display: flex;
-    width: 98%;
+    width: center;
     justify-content: center; /*alinha horizontalmente ao centro do container*/
     align-items: center; /*alinha verticalmente ao centro. */
     border-bottom: 1px solid #333; /* Cinza escuro */
