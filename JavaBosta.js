@@ -1,56 +1,112 @@
 const form = document.querySelector("form");
 const h2 = document.querySelector("pre");
+const Pergunta = document.querySelector("#Pergunta")
 
-const Texto_Abandono = "O abandono paterno e materno pode gerar diversos malefícios sérios e profundos, tanto no aspecto emocional quanto no \n psicológico, social e até físico. A seguir, explico os principais impactos \n\n\n--- \n\n\n🔴 Malefícios do abandono paterno ou materno \n\n 1. Problemas emocionais e psicológicos \n\n Baixa autoestima: a criança pode achar que não é digna de amor. \n Ansiedade e depressão: a ausência dos pais pode causar tristeza profunda, angústia e medo de rejeição. \n\n Sentimento de culpa: muitas crianças acham que são responsáveis pelo abandono. \n\n Raiva e agressividade: podem surgir como defesa ou forma de expressar dor. \n\n 2. Dificuldades de relacionamento \n Medo de criar laços: por insegurança ou medo de abandono novamente. \n\n Dificuldade de confiar nos outros: inclusive em amizades e relacionamentos amorosos. \n\n Carência afetiva: busca constante de atenção ou aprovação. \n\n 3. Consequências sociais e futuras \n\n Dificuldade de projetar o futuro: insegurança sobre o próprio valor ou capacidade. \n\n Risco maior de envolvimento com criminalidade ou drogas: especialmente em contextos vulneráveis. \n\n Reprodução do ciclo de abandono: filhos abandonados podem ter dificuldade em se tornarem pais presentes."
-const Texto_Ansiedade = "Ansiedade: \n\n Ansiedade é uma emoção natural do ser humano, caracterizada por sentimentos de preocupação, nervosismo e desconforto, \n especialmente em situações de incerteza ou perigo. \n\n Sintomas da ansiedade: \n\n\ Físicos: \n\n Palpitações, sudorese, tremores, falta de ar, tontura, dor no peito, tensão muscular. \n\n Emocionais: \n\n Preocupação excessiva, irritabilidade, dificuldade de concentração, medo constante. \n\n Comportamentais: \n\n Evitação de situações temidas, dificuldade para dormir, mudanças no apetite. \n\n Tratamento da ansiedade: \n\n Psicoterapia: Ajuda a entender e lidar com as causas da ansiedade. \n\n Medicação: \n\n Medicamentos prescritos por um médico, para aliviar os sintomas. \n\n Terapia combinada: \n\n Combinação de psicoterapia e medicação. \n\n Depressão: \n\n A depressão é um transtorno mental sério que afeta o humor, os pensamentos e o comportamento, causando  sentimentos persis-\n-tentes de tristeza, perda de interesse em atividades, fadiga e outros sintomas que podem interferir nas atividades diárias \n\n Tratamento: \n\n A depressão pode ser tratada com sucesso através de terapias psicológicas, medicamentos ou uma combinação de ambos. \n\n Causas: \n\n A depressão pode ser causada por uma combinação de fatores genéticos, biológicos, ambientais e psicológicos."
-
+const Perguntas = [
+    "Quando a ansiedade passa a ser considerada um fator de risco para depressão?", 
+    "O que caracteriza o abandono afetivo no Brasil?", 
+    "Qual dos sintomas abaixo é um dos mais comuns da depressão?",
+    "Qual droga é considerada depressora do sistema nervoso central?"
+]
 
 form.Op1.addEventListener("click", e => {
+    if(Perguntas.includes("Quando a ansiedade passa a ser considerada um fator de risco para depressão?")){
+       
+       Perguntas.shift();
+       Pergunta.innerText = Perguntas[0]
+       form.Op1.value = "Não levar o filho ao cinema ou festas"
+       form.Op2.value = "Ausência de cuidado, afeto \n e convivência, mesmo com \n pensão paga"
+       form.Op3.value = "Apenas o não pagamento da pensão alimentícia"
+       form.Op4.value = "A criança morar longe dos avós"
+       h2.innerText = "";
+    }else{
+       h2.style.color = "orange";
+       h2.style.fontWeight = "bold";
+       h2.innerHTML = `❌ Essa não é a resposta correta.<br>
+       🌱 Não tem problema, faz parte do aprendizado!<br><br>
+       📞 Se precisar de apoio emocional:<br>
+       • Ligue <strong>188</strong> (CVV – 24h, gratuito)<br>
+       • Procure um <strong>CAPS</strong> na sua cidade<br>
+       • Ligue <strong>136</strong> para informações do SUS<br>`;
 
-    const gamer = form.Op1.value
-
-    if(gamer){
-        h2.style.display = "Block";
-        h2.innerText = "EM BREVE..."
+      h2.scrollIntoView({ behavior: "smooth", block: "center" });
     }
-e.preventDefault();
+    e.preventDefault();
 })
 
 form.Op2.addEventListener("click", e => {
+    if(Perguntas.includes("O que caracteriza o abandono afetivo no Brasil?") && 
+       Perguntas.includes("Quando a ansiedade passa a ser considerada um fator de risco para depressão?") == false){
+       
+       Perguntas.shift();
+       Pergunta.innerText = Perguntas[0]
+       form.Op1.value = "Euforia constante"
+       form.Op2.value = "Aumento de foco e produtividade"
+       form.Op3.value = "Retardo motor e fadiga extrema"
+       form.Op4.value = "Insônia apenas em jovens"
+       h2.innerText = "";
+    }else{
+       h2.style.color = "orange";
+       h2.innerHTML = `❌ Ops, quase lá!<br>
+       Continue tentando, você está aprendendo!<br><br>
+       📞 Apoio emocional:<br>
+       • Ligue 188 (CVV)<br>
+       • CAPS em sua cidade<br>
+       • Disque 136 (SUS)<br>`;
 
-    const gamer = form.Op2.value
-
-    if(gamer){
-        h2.style.display = "Block";
-        h2.innerText = "EM BREVE..."
-    }
+      h2.scrollIntoView({ behavior: "smooth", block: "center" });
+    }    
     e.preventDefault();
 })
 
 form.Op3.addEventListener("click", e => {
+    if(Perguntas.includes("Qual dos sintomas abaixo é um dos mais comuns da depressão?") && 
+       Perguntas.includes("O que caracteriza o abandono afetivo no Brasil?") == false){
+       
+       Perguntas.shift();
+       Pergunta.innerText = Perguntas[0]
+       form.Op1.value = "Cocaína"
+       form.Op2.value = "Maconha"
+       form.Op3.value = "LSD"
+       form.Op4.value = "Álcool"
+       h2.innerText = "";
+    }else{
+       h2.style.color = "orange";
+       h2.innerHTML = `❌ Não foi dessa vez 😅<br>
+       Mas cada erro é uma chance de aprender!<br><br>
+       📞 Apoio disponível:<br>
+       • 188 (CVV – 24h)<br>
+       • CAPS em sua cidade<br>
+       • 136 (SUS)<br>`;
 
-    const gamer = form.Op3.value
-
-    if(gamer){
-        h2.style.display = "Block";
-        h2.innerText = Texto_Ansiedade;
-    }
-e.preventDefault();
-})
-
-form.Op4.addEventListener("click", e => {
-
-    const gamer = form.Op4.value
-
-    if(gamer){
-        h2.style.display = "Block";
-        h2.innerText = Texto_Abandono;
-    }
+      h2.scrollIntoView({ behavior: "smooth", block: "center" });
+    }  
     e.preventDefault();
 })
 
-form.addEventListener("reset", e => {
+form.Op4.addEventListener("click", e => {
+     if(Perguntas.includes("Qual droga é considerada depressora do sistema nervoso central?") && 
+        Perguntas.includes("Qual dos sintomas abaixo é um dos mais comuns da depressão?") == false){
+       h2.style.color = "green";
+       h2.innerText = "🎉 Você acertou todas! Continue cuidando de você e apoiando quem precisa.";
+       
+       Perguntas.unshift("🎉 Parabéns! Você concluiu o quiz!");
+       Pergunta.innerText = Perguntas[0]
+       h2.innerText = "";
+       form.Op1.disabled = true;
+       form.Op2.disabled = true;
+       form.Op3.disabled = true;
+       form.Op4.disabled = true;
+     }else{
+       h2.style.color = "orange";
+       h2.innerHTML = `❌ Essa não está correta.<br>
+       Mas não desanime, tente novamente!<br><br>
+       📞 Precisa conversar?<br>
+       • 188 (CVV)<br>
+       • CAPS em sua cidade<br>
+       • 136 (SUS)<br>`;
 
-    h2.innerText = ""
-    e.preventDefault
+      h2.scrollIntoView({ behavior: "smooth", block: "center" });
+     }  
+    e.preventDefault();
 })

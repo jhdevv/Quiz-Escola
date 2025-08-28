@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeo</title>
+    <link rel="stylesheet" href="Bosta_CSS2.css">
+</head>
+<body>
+    <nav id="menu">
+        <a class="menu_item" href="index.html">Enciclopédia</a>
+        <a class="menu_item" href="fonte.html">Fontes</a>
+        <a class="menu_item" href="Video.html">Vídeo</a>
+    </nav>
+
+    <video controls controlslist="nodownload noplaybackrate" disablepictureinpicture>
+        <source src="VIDEO_DO_TRABALHO_FAMILIA.mp4" type="video/mp4">
+        <p>Seu navegador não suporta o elemento do <code>HTML5</code></p>
+    </video>
+
+    <script>
+        // Bloqueia o botão direito em cima do vídeo
+        document.querySelector("video").addEventListener("contextmenu", e => e.preventDefault());
+    </script>
+</body>
+</html>
